@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+#grad1 {
+  @apply absolute top-0 left-0 w-full h-full bg-black bg-gradient-to-bl from-gray-800 via-gray-900 to-black pointer-events-none;
+  animation: breathe 5s ease infinite alternate;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    background-size: 100% 100%;
+  }
+  50% {
+    background-size: 145% 145%;
+  }
+}
+
+.gradient-border {
+  --border-width: 2px;
+  @apply relative flex justify-center items-center w-52 h-72 text-4xl uppercase text-white bg-gray-700;
+  border-radius: var(--border-width);
+}
+
+.gradient-border::after {
+  @apply absolute top-0 left-0 w-full h-full;
+  content: "";
+  top: calc(-1 * var(--border-width));
+  left: calc(-1 * var(--border-width));
+  z-index: -1;
+  background: linear-gradient(
+    60deg,
+    hsl(224, 85%, 66%),
+    hsl(269, 85%, 66%),
+    hsl(314, 85%, 66%),
+    hsl(359, 85%, 66%),
+    hsl(44, 85%, 66%),
+    hsl(89, 85%, 66%),
+    hsl(134, 85%, 66%),
+    hsl(179, 85%, 66%)
+  );
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  border-radius: calc(2 * var(--border-width));
+  animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.extended-container {
+  @apply h-40;
+}
+
+.gradient-text {
+  --bg-size: 400%;
+  --color-one: cyan;
+  --color-two: fuchsia;
+  @apply font-bold bg-clip-text text-transparent;
+  background: linear-gradient(
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+  animation: move-bg 8s infinite linear;
+}
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
+
+.fade-in {
+  @apply opacity-0 transition-opacity duration-500 ease-in-out;
+}
+
+.fade-in.fade-in-show {
+  @apply opacity-100;
+}
