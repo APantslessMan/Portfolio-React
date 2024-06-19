@@ -53,9 +53,8 @@ const About: React.FC = () => {
             <div className="divider divider-neutral -mt-5 pb-10"></div>
             </AnimateOnScroll><AnimateOnScroll>
             <div className="div grid grid-cols-3">
-                
-                <p className="w-auto bg-stone-700 z-0  -mr-20 -mb-10 -mt-10 rounded-lg shadow-black shadow-xl"></p>
-                <p className="bg-stone-800 text-lg z-20  -ml-20 md:-ml-0 bg-opacity-95 font-light p-6  rounded-lg shadow-black shadow-xl col-span-2 text-gray-400">
+                <div className="w-auto bg-stone-700 z-0  -mr-20 -mb-10 -mt-10 rounded-lg shadow-black shadow-xl"></div>
+                <div className="bg-stone-800 text-lg z-10  mr-1 -ml-20 md:-ml-0 bg-opacity-95 font-light p-2 rounded-lg shadow-black shadow-xl col-span-2 text-gray-400">
                     Hello! 
                     <br /><br />I'm Casey Petersen, a
                     <b className="font-bold text-white"> Full Stack Developer </b> 
@@ -74,7 +73,7 @@ const About: React.FC = () => {
                     and contributing to impactful projects, always with a positive attitude and a humble spirit.
                     <br /><br />Thank you for visiting my site. Let's build something amazing together!
 
-              </p>
+              </div>
               </div>
               
           </AnimateOnScroll>
