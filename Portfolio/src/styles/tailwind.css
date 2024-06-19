@@ -11,7 +11,20 @@
   background-color: black;
   background-image: linear-gradient(to bottom left, #35423e, 35%, black);
   animation: breathe 18s ease infinite alternate;
-  pointer-events: none;
+}
+
+.product-image {
+  text-align: center;
+}
+
+.rotateImg {
+  width: auto;
+  height: 100px;
+  transition: transform 0.5s ease;
+}
+
+.rotateImg:hover {
+  transform: rotate(-12deg);
 }
 
 @keyframes breathe {
@@ -24,7 +37,7 @@
   }
 }
 
-.gradient-border {
+/* .gradient-border {
   --border-width: 2px;
   @apply relative flex justify-center items-center w-52 h-72 text-4xl uppercase text-white bg-gray-700;
   border-radius: var(--border-width);
@@ -51,7 +64,7 @@
   background-position: 0 50%;
   border-radius: calc(2 * var(--border-width));
   animation: moveGradient 4s alternate infinite;
-}
+} */
 
 @keyframes moveGradient {
   50% {

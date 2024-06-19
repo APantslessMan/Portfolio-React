@@ -7,6 +7,7 @@ export default {
     extend: {
       colors: {
         greel: "#35423e",
+        github: "#1f883d",
       },
     },
   },
