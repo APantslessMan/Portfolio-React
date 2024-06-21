@@ -35,7 +35,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, openLink }) =
            <div className=" md:hidden *:shadow-black *:shadow-sm flex gap-2 pt-4  pb-6 md:gap-2 self-end justify-self-start">
         {project.link1 && <button className="rounded hover:rounded-lg bg-stone-600 w-24 h-8 text-white mb-2"  onClick={() => openLink(project.link1)}>Live Site</button>  }
         {project.link2 && <button className="rounded hover:rounded-lg bg-stone-600 w-24 h-8 text-white mb-2" onClick={() => openLink(project.link2)}>Demo</button> }
-        {project.link3 && <button className="rounded hover:rounded-lg bg-github w-24 h-8 text-white" onClick={() => openLink(project.link3)}><div className="flex justify-center text-center ">Github <span className="pl-1 pt-1"><GoTriangleDown /></span></div>
+        {project.link3 && <button className="rounded hover:rounded-lg bg-github w-24 h-8 text-white" onClick={() => openLink(project.link3)}><div className="flex justify-center text-center ">Github<i className="devicon-github-original  pl-1 pt-1"></i>
+          </div>
         </button> }
       </div>
         </div>
@@ -45,7 +46,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, openLink }) =
       <div className="hidden *:shadow-black *:shadow-sm md:inline col-span-2 md:-ml-16 md:w-28 grid-rows-3 pb-10 md:gap-2 self-end justify-self-center">
         {project.link1 && <button className="rounded hover:rounded-lg bg-stone-600 w-24 h-8 text-white mb-2"  onClick={() => openLink(project.link1)}>Live Site</button>  }
         {project.link2 && <button className="rounded hover:rounded-lg bg-stone-600 w-24 h-8 text-white mb-2" onClick={() => openLink(project.link2)}>Demo</button> }
-        {project.link3 && <button className="rounded hover:rounded-lg bg-github w-24 h-8 text-white" onClick={() => openLink(project.link3)}><div className="flex justify-center text-center ">Github <span className="pl-1 pt-1"><GoTriangleDown /></span></div>
+        {project.link3 && <button className="rounded hover:rounded-lg bg-github w-24 h-8 text-white" onClick={() => openLink(project.link3)}><div className="flex justify-center text-center ">Github <i className="devicon-github-original pl-2 pt-1"></i>         </div>
         </button> }
       </div>
      
