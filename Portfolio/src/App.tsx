@@ -32,37 +32,35 @@ const App: React.FC = () => {
 };
 
       return (
-    <main>
-      
-      <div className="gradientbg-breathe h-dvh absolute top-0 left-0 bg-gradient-to-bl from-stone-700 to-35% to-stone-900">
-        <div className="navbar bg-black opacity-70">
-          <div className="flex-1 *:justify-left">
-            <span className="text-white text-3xl -pl-1"><TbSlashes /></span>
-            <a className="btn btn-ghost text-sm lg:text-xl w-24 text-white hidden pt-2 pl-1 lg:inline">Caseyp.ca</a>
+    <main className="bg-black">
+    
+      <div className="gradientbg-breathe h-dvh w-dvw   max-w-full md:w-dvw absolute top-0 left-0 bg-gradient-to-bl from-stone-700 to-35% to-stone-900">
+        <div className="navbar bg-black justify-start ">
+          <div className="flex-1">
+            <span className="text-white text-3xl -pl-1 grow-0 flex-none"><TbSlashes /></span>
+            <button className=" text-sm lg:text-2xl w-24 text-white hidden  mr-2 text-left lg:inline">Caseyp.ca</button>
             <span className="text-white text-3xl hidden lg:inline"><TbSlashes /></span>
-            <a className="btn btn-ghost text-xl w-20 text-white hidden pt-2 pl-1  lg:inline" onClick={() => scrollToRef(projectsRef)}>Projects</a>
+            <a className="btn btn-ghost text-2xl font-normal w-20 text-white hidden pt-2 pl-2 -ml-2 mr-4 lg:inline" onClick={() => scrollToRef(projectsRef)}>Projects</a>
             <span className="text-white text-3xl hidden lg:inline"><TbSlashes /></span>
-            <a className="btn btn-ghost text-xl w-16 text-white hidden pt-2 pl-1  lg:inline" onClick={() => scrollToRef(aboutRef)}>About</a>
+            <a className="btn btn-ghost text-2xl w-16  pt-2 pl-2 -ml-3 mr-4 font-normal text-white hidden  lg:inline" onClick={() => scrollToRef(aboutRef)}>About</a>
             <span className="text-white text-3xl hidden lg:inline"><TbSlashes /></span>
-            <a className="btn btn-ghost text-xl w-12 text-white pt-2 pl-1  hidden lg:inline" onClick={() => scrollToRef(blogRef)}>Blog</a>
+            <a className="btn btn-ghost text-2xl w-12 pt-2 pl-2 -ml-3 mr-4 font-normal text-white hidden lg:inline" onClick={() => scrollToRef(blogRef)}>Blog</a>
           </div>
           
-            <details className="dropdown dropdown-bottom dropdown-end lg:hidden ">
-              <summary role="button" className="btn btn-ghost text-2xl text-white pl-0 ">Caseyp.ca</summary>
-              <ul tabIndex={0} className="dropdown-content fixed l-1 bg-black z-[1] menu p-2 justify-left shadow">
+            <details className="dropdown lg:hidden ">
+              <summary role="button" className="btn bg-black border-none -ml-4 bg-opacity-20 text-2xl text-white ">Caseyp.ca</summary>
+              <ul tabIndex={0} className="dropdown-content fixed  -ml-10 left-0 bg-black z-[1] menu  opacity-100 shadow-white">
                 <li><a className="text-xl text-white block justify-left" href="#" onClick={() => scrollToRef(projectsRef)}>//Projects</a></li>
                 <li><a className="text-xl text-white block justify-left" href="#" onClick={() => scrollToRef(aboutRef)}>//About</a></li>
                 <li><a className="text-xl text-white block justify-left" href="#" onClick={() => scrollToRef(blogRef)}>//Blog</a></li>
               </ul>
             
             </details>
+            <div className="space-between flex-grow"></div>
             <div className="flex-none">
-              <a className="btn btn-ghost text-white text-2xl" onClick={handleShowToast}><LuCopy /> dev@caseyp.ca</a>
+              <a className="btn btn-ghost text-white se:text-lg md:text-1xl" onClick={handleShowToast}><LuCopy /> dev@caseyp.ca</a>
             </div>
-          
           </div>
-       
-      
         {show && <Toast message="Email Copied to Clipboard" onClose={() => setShow(false)} />}
       <Header />
       <div ref={projectsRef}>

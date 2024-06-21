@@ -55,7 +55,7 @@ const AnimateOnScroll = ({ children, reappear, threshold = 0.5 }: Props) => {
 
   return (
     <>
-      <div ref={containerRef} className={`transition duration-1000 ${isVisible ? "opacity-100 blur-none translate-x-0" : "opacity-0 blur-lg -translate-x-20"}  motion-reduce:transition-none motion-reduce:hover:transform-none`}>
+      <div ref={containerRef} className={`transition duration-500 ${isVisible ? "opacity-100 blur-none " : "opacity-0 blur-lg "}  motion-reduce:transition-none motion-reduce:hover:transform-none`}>
         {children}
       </div>
     </>
