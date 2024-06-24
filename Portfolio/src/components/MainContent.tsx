@@ -1,8 +1,6 @@
 import React from "react";
 import AnimateOnScroll from "./utils/AnimateOnScreen";
 
-import { GoTriangleDown } from "react-icons/go";
-
 interface Project {
   title: string;
   desc?: string;

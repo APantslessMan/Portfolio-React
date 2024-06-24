@@ -2,6 +2,11 @@ import React from "react";
 
 
 const Contact: React.FC = () => {
+    const openLink = (url?: string) => {
+        if (url) {
+        window.open(url, "_blank", "noreferrer");
+      }
+      };
 
   return (
     <main className="bg-black">
@@ -16,9 +21,9 @@ const Contact: React.FC = () => {
                 
             </div> 
             <div className="grid items-center pt-5 -mt-10 px-4">
-    <button className="text-7xl devicon-linkedin-plain-wordmark "></button>
+    <button className="btn btn-ghost mt-2 mb-6" onClick={() => openLink('https://www.linkedin.com/in/caseyp-dev')}><i className="text-7xl devicon-linkedin-plain-wordmark"></i> </button>
           
-    <button className="text-5xl  -mt-4 pb-4 devicon-github-original-wordmark"></button>
+    <button className="btn btn-ghost mb-2 mt-2" onClick={() => openLink('https://github.com/APantslessMan')}><i className="text-5xl  -mt-4 pb-4 devicon-github-original-wordmark"></i> </button>
           
           </div>
 
